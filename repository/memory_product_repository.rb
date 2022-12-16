@@ -17,7 +17,7 @@ module Repository
 
     protected
 
-    def find(product)
+    def exists?(product)
       @data.find do |saved_product|
         saved_product[:id] == product[:id] && saved_product[:source] == product[:source]
       end
@@ -25,6 +25,7 @@ module Repository
 
     def create(product)
       @data << product
+      product
     end
   end
 end

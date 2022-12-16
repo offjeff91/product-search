@@ -12,8 +12,7 @@ class Search
 
   def run(config)
     products = source(config).call_api(config)
-    products.each(&method(:check))
-    products
+    products.map(&method(:check))
   end
 
   protected
