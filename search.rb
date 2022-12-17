@@ -32,4 +32,4 @@ products = Search.new.run(
     text_search: 'camisa botafogo 1984'
   )
 )
-puts products
+puts products.map { |prod| puts prod.to_h }
